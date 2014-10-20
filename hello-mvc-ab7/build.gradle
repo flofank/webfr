@@ -1,0 +1,43 @@
+buildscript {
+    repositories {
+        maven { url "http://repo.spring.io/libs-milestone" }
+        mavenLocal()
+    }
+    dependencies {
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:1.1.6.RELEASE")
+    }
+}
+
+project.buildDir = 'target/classes'
+
+apply plugin: 'java'
+apply plugin: 'eclipse'
+apply plugin: 'spring-boot'
+apply plugin: 'war'
+
+jar {
+    baseName = 'flashcard-mvc-war'
+}
+
+repositories {
+    mavenCentral()
+    maven { url "http://repo.spring.io/libs-milestone" }
+    maven { url "https://repository.jboss.org/nexus/content/repositories/releases" }
+}
+
+dependencies {
+    providedCompile("javax.servlet:javax.servlet-api:3.0.1")
+    providedCompile("javax.el:javax.el-api:3.0.0")
+    
+    // add these two libs if using Thymeleaf
+	compile("org.springframework.boot:spring-boot-starter-thymeleaf"){
+		exclude module: "spring-boot-starter-tomcat"
+	}
+	compile("nz.net.ultraq.thymeleaf:thymeleaf-layout-dialect")	
+	
+    testCompile("junit:junit")
+}
+
+task wrapper(type: Wrapper) {
+    gradleVersion = '1.11'
+}

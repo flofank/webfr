@@ -1,2 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<typeInfoHistroy/>
+<typeInfoHistroy>
+<typeInfo handle="=basic/src\/main\/java&lt;ch.fhnw.webfr.flashcard.domain{Questionnaire.java[Questionnaire" modifiers="1" timestamp="1407932572000"/>
+<typeInfo handle="=flashcard-basic-ab4/src\/main\/java&lt;ch.fhnw.webfr.flashcard.domain{Questionnaire.java[Questionnaire" modifiers="1" timestamp="1408462624000"/>
+<typeInfo handle="=flashcard-basic-ab4/src\/main\/java&lt;ch.fhnw.webfr.flashcard{WebServletInitializer.java[WebServletInitializer" modifiers="1" timestamp="1411980684507"/>
+</typeInfoHistroy>

@@ -25,7 +25,7 @@ public class BasicServlet extends HttpServlet {
 		if (isLastPathElementQuestionnaires(pathElements)) {
 			handleQuestionnairesRequest(request, response);
 		} else {
-			handleIndexRequest(request, response);
+			handleIndexRequest(request, response, Long.parseLong(pathElements[pathElements.length-1]));
 		}
 	}
 
@@ -49,10 +49,14 @@ public class BasicServlet extends HttpServlet {
 	}
 
 	private void handleIndexRequest(HttpServletRequest request,
-			HttpServletResponse response) throws IOException {
+			HttpServletResponse response, long index) throws IOException {
+		Questionnaire q = QuestionnaireRepository.getInstance().findById(index);
+		
 		PrintWriter writer = response.getWriter();
 		writer.append("<html><head><title>Example</title></head><body>");
 		writer.append("<h3>Welcome</h3>");
+		writer.append("<h4>" + q.getTitle() + "</h4>");
+		writer.append("<p>" + q.getDescription() + "</p>");
 		String url = request.getContextPath()+request.getServletPath();
 		writer.append("<p><a href='" + response.encodeURL(url) + "/questionnaires'>All Questionnaires</a></p>");
 		writer.append("</body></html>");
@@ -61,7 +65,7 @@ public class BasicServlet extends HttpServlet {
 	@Override
 	public void init(ServletConfig config) throws ServletException {
 		super.init(config);
-		QuestionnaireInitializer.createQuestionnaires();
+//		QuestionnaireInitializer.createQuestionnaires();
 	}
 
 }

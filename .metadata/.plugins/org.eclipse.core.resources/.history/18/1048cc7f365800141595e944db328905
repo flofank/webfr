@@ -1,0 +1,5 @@
+package ch.fhnw.webfr.hello;
+
+public class Counter {
+
+}

@@ -1,0 +1,4 @@
+#Tomcat publish data
+#Mon Oct 20 10:53:33 CEST 2014
+org.eclipse.jst.jee.server\:/binary\:C\:\\work\\gradle_repo\\caches\\modules-2\\files-2.1\\org.springframework\\spring-web\\4.0.7.RELEASE\\9c8505b6785bfe6b45bbdc8c8cbcda628feb21b1\\spring-web-4.0.7.RELEASE.jar=C\:\\work\\Java\\sts-bundle\\pivotal-tc-server-developer-3.0.0.RELEASE\\base-instance\\wtpwebapps\\hello-jsf-ab7\\WEB-INF\\lib\\spring-web-4.0.7.RELEASE.jar
+org.eclipse.jst.jee.server\:hello-jsf-ab7=C\:\\work\\Java\\sts-bundle\\pivotal-tc-server-developer-3.0.0.RELEASE\\base-instance\\wtpwebapps\\hello-jsf-ab7

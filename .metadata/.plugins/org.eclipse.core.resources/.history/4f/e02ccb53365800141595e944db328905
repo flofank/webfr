@@ -1,0 +1,10 @@
+<html lang="en" xmlns="http:/www.w3.org/19999/xhtml" xmlns:h="xmlns.jcp.org/jsf/html">
+	<h:head>
+		<title>Facelets Hello WOrld</title>
+	</h:head>
+	<h:body>
+	
+		<h:outputText value="JSF Wolrd called#{counter.value} times."/>
+		
+		</h:body>
+</html>

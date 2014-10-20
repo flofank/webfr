@@ -1,0 +1,25 @@
+package ch.fhnw.webfr.hello.web;
+
+import javax.servlet.http.HttpSession;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+
+
+@Controller
+@RequestMapping("/counter")
+public class CounterController {
+	
+	@RequestMapping(method = RequestMethod.GET)
+	public String count(Model model, HttpSession session) {
+		System.out.println(session.getAttribute("times"));
+		System.out.println(session.getAttribute("times").getClass());
+		Integer times = (int) session.getAttribute("times");
+//		int times = session.getAttribute("times") != null ? (int) session.getAttribute("times") : 0;
+		times += 1;
+		session.setAttribute("times", times);
+		return "/count";
+	}
+}

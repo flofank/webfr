@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+  xmlns:layout="http://www.ultraq.net.nz/web/thymeleaf/layout"
+  layout:decorator="layout">
+<head>
+    <title>flashcard</title>
+    <link rel="stylesheet" th:href="@{/css/bootstrap.min.css}" href="../../../webapp/css/bootstrap.min.css" />
+    <link rel="stylesheet" th:href="@{/css/app.css}" href="../../../webapp/css/app.css" />    
+</head>
+<body>
+    <div layout:fragment="content">
+        <a class="btn btn-primary" href="?form">New</a>
+        <hr/>
+        <div th:each="questionnaire : ${questionnaires}">
+            <dl>
+                <dt th:text="'[' + ${questionnaire.id} + '] ' + ${questionnaire.title}"/>
+                <dd th:text="${questionnaire.description}"/>  
+            </dl>
+        </div>
+    </div>
+</body>
+</html>

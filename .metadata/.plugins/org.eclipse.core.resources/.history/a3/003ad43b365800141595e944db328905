@@ -1,0 +1,8 @@
+<html>
+	<h:head>
+		<title>Facelets Hello WOrld</title>
+	</h:head>
+	<h:body>
+	
+		<h:outputText value="JSF Wolrd called#{counter.value} times."/>
+</html>
